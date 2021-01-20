@@ -11,13 +11,16 @@ function myReverse(str) {
 
 //Question 2
 function allCombinations(str) {
-  let combinations = [];
   // your code here
-  for(let i = 0; i > str.length; i++){
-    
+  let arr = [];
+  for(let i = 0; i < str.length; i++){
+    let x = i + 1;
+    arr[i] = str.substring(i, x);
   }
   //
-  return combinations;
+    
+    substrings("dog");
+/////////////////////////////
 }
 
 //Question 3
@@ -40,16 +43,24 @@ function myPower(x, n) {
   return num;
 }
 
+//abanibiabohebe
 //Question 5
 function getFirstNotRepeating(str) {
   // your code here
-  return "";
+  return str;
 }
 
 //Question 6 (Bonus)
 function isPrefectNumber(num) {
-  // your code here
-  return "I'm not interested in the bonus question :(";
+  let upTo = 10; //Specify how many numbers to look up for before returning false.
+  for(let x = 1; x <= upTo; x++){
+    let firs = Math.pow(2, x);
+    let bra = Math.pow(2, x + 1) - 1
+    if(firs * bra === num){
+      return true;
+    }
+  }
+  return false;
 }
 
 // *** Playground ***
