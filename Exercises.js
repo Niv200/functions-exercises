@@ -34,13 +34,10 @@ function allCaps(str) {
     return finalWord.slice(1);
 } 
 
-// Example string : 'the quick brown fox'
-// Expected Output : 'The Quick Brown Fox '
-
 //Question 4
 function myPower(x, n) {
-  // your code here
-  return "";
+  let num = Math.pow(x, n);
+  return num;
 }
 
 //Question 5
