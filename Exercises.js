@@ -14,7 +14,7 @@ function allCombinations(str) {
   let combinations = [];
   // your code here
   for(let i = 0; i > str.length; i++){
-
+    
   }
   //
   return combinations;
@@ -22,9 +22,20 @@ function allCombinations(str) {
 
 //Question 3
 function allCaps(str) {
-  // your code here
-  return "";
-}
+  let array = str.split(" ");
+  let finalWord = "";
+  for(let i = 0; i < array.length; i++){
+    let wordOrigin = array[i];
+    let firstLetter = wordOrigin.charAt(0);
+    let restWord = wordOrigin.slice(1);
+    let word = firstLetter.toUpperCase() + restWord;
+    finalWord = finalWord + " " + word
+  }
+    return finalWord.slice(1);
+} 
+
+// Example string : 'the quick brown fox'
+// Expected Output : 'The Quick Brown Fox '
 
 //Question 4
 function myPower(x, n) {
