@@ -1,14 +1,21 @@
 //Question 1
 function myReverse(str) {
   // your code here
-  return "";
+  let arr = str.split('');
+  let msg = "";
+  for(let i = 0; i < arr.length; i++){
+    msg = arr[i] + msg;
+  }
+  return msg;
 }
 
 //Question 2
 function allCombinations(str) {
   let combinations = [];
   // your code here
+  for(let i = 0; i > str.length; i++){
 
+  }
   //
   return combinations;
 }
