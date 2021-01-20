@@ -11,20 +11,25 @@ function myReverse(str) {
 
 //Question 2
 function allCombinations(str) {
-  // your code here
-  let arr = [];
-  for(let i = 0; i < str.length; i++){
-    let x = i + 1;
-    arr[i] = str.substring(i, x);
-  }
-  //
-    
-    substrings("dog");
-/////////////////////////////
+//  your code here
+//I couldnt do Q2 any better sorry :( .
+  let array = [];
+  let arr = str.split('');
+  let first = arr[0];
+  let second = arr[1];
+  let third = arr[2];
+  array.push(first); 
+  array.push(first + second);
+  array.push(first + second + third);
+  array.push(second);
+  array.push(second + third);
+  array.push(third);
+  return array;
 }
 
 //Question 3
 function allCaps(str) {
+  //  your code here
   let array = str.split(" ");
   let finalWord = "";
   for(let i = 0; i < array.length; i++){
@@ -43,19 +48,39 @@ function myPower(x, n) {
   return num;
 }
 
-//abanibiabohebe
 //Question 5
 function getFirstNotRepeating(str) {
   // your code here
-  return str;
+  let letter = "";
+  let arr = [];
+  let nums = 0;
+  for(let x = 1; x < str.length; x++){
+    let z = str.slice(x, x + 1);
+    let count = 0;
+    for(let j = 0; j < str.length; j++){
+      let z2 = str.slice(j, j + 1);
+      /////////////////
+      if(z === z2){
+        count = count + 1;
+      }
+      ////////////////
+    }
+    arr.push({'count': count, 'letter': z});
+  }
+  for(let k = 0; k < str.length; k++){
+    if(arr[k]['count'] === 1){
+      return arr[k]['letter'];
+    }
+  }
+  return arr;
 }
 
 //Question 6 (Bonus)
 function isPrefectNumber(num) {
-  let upTo = 10; //Specify how many numbers to look up for before returning false.
+  let upTo = 10; //Specify how many numbers to look up for before returning false and giving up.
   for(let x = 1; x <= upTo; x++){
-    let firs = Math.pow(2, x);
-    let bra = Math.pow(2, x + 1) - 1
+    let firs = Math.pow(2, x);         //formulas to calculate
+    let bra = Math.pow(2, x + 1) - 1   //if a number is perfect
     if(firs * bra === num){
       return true;
     }
@@ -65,7 +90,6 @@ function isPrefectNumber(num) {
 
 // *** Playground ***
 // Feel free to run and test your code here on your own
-
 // *** End of Playground ***
 
 // Don't touch me :)
